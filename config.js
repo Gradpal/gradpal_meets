@@ -1266,7 +1266,7 @@ var config = {
     //
     //     // The desktop deeplinking config, disabled by default.
     //     desktop: {
-    //         appName: 'Jitsi Meet',
+    //         appName: 'Gradpal Meet',
     //         appScheme: 'jitsi-meet,
     //         download: {
     //             linux:
@@ -1285,7 +1285,7 @@ var config = {
 
     //     // The ios deeplinking config.
     //     ios: {
-    //         appName: 'Jitsi Meet',
+    //         appName: 'Gradpal Meet',
     //         // Specify mobile app scheme for opening the app from the mobile browser.
     //         appScheme: 'org.jitsi.meet',
     //         // Custom URL for downloading ios mobile app.
@@ -1301,7 +1301,7 @@ var config = {
 
     //     // The android deeplinking config.
     //     android: {
-    //         appName: 'Jitsi Meet',
+    //         appName: 'Gradpal Meet',
     //         // Specify mobile app scheme for opening the app from the mobile browser.
     //         appScheme: 'org.jitsi.meet',
     //         // Custom URL for downloading android mobile app.
