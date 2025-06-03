@@ -94,7 +94,6 @@ export function appNavigate(uri?: string) {
  */
 export function maybeRedirectToWelcomePage(options: { feedbackSubmitted?: boolean; showThankYou?: boolean; } = {}) {
     return (dispatch: IStore['dispatch'], getState: IStore['getState']) => {
-
         const {
             enableClosePage
         } = getState()['features/base/config'];
@@ -108,7 +107,8 @@ export function maybeRedirectToWelcomePage(options: { feedbackSubmitted?: boolea
                     // @ts-ignore
                     window.location = 'about:blank';
                 } else {
-                    dispatch(redirectToStaticPage('/'));
+                    // Redirect to GradPal marketplace login page
+                    window.location.href = 'https://auth.marketplace.gradpal.io/auth/login';
                 }
 
                 return;
@@ -147,15 +147,10 @@ export function maybeRedirectToWelcomePage(options: { feedbackSubmitted?: boolea
             }, NOTIFICATION_TIMEOUT_TYPE.STICKY));
         }
 
-        // if Welcome page is enabled redirect to welcome page after 3 sec, if
-        // there is a thank you message to be shown, 0.5s otherwise.
-        if (isWelcomePageEnabled(getState())) {
-            setTimeout(
-                () => {
-                    dispatch(redirectWithStoredParams('/'));
-                },
-                options.showThankYou ? 3000 : 500);
-        }
+        // Redirect to GradPal marketplace login page after showing thank you message
+        setTimeout(() => {
+            window.location.href = 'https://auth.marketplace.gradpal.io/auth/login';
+        }, options.showThankYou ? 3000 : 500);
     };
 }
 
