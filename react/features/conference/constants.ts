@@ -3,7 +3,7 @@ import { IFRAME_EMBED_ALLOWED_LOCATIONS as ADDITIONAL_LOCATIONS } from './extraC
 /**
  * Timeout of the conference when iframe is disabled in minutes.
  */
-export const IFRAME_DISABLED_TIMEOUT_MINUTES = 5;
+export const IFRAME_DISABLED_TIMEOUT_MINUTES = 30;
 
 /**
  * A list of allowed location to embed iframe.
